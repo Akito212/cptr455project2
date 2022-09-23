@@ -3,11 +3,10 @@ var router = express.Router();
 
 
 var ctrlLocations =require('../controllers/locations')
-var ctrlOthers =require('../controllers/other')
+var ctrlOthers =require('../controllers/others')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', ctrlOthers.index);
 
 module.exports = router;
+
